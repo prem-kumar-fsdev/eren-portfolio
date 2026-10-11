@@ -1,0 +1,72 @@
+.nav {
+  position: fixed;
+  top: 16px;
+  left: 50%;
+  translate: -50% 0;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.logo, .pill, .mail {
+  height: 56px;
+  border-radius: 100px;
+  border: 1px solid var(--zinc-200);
+  background: rgba(244, 244, 245, 0.8);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+.logo {
+  width: 56px;
+  display: grid;
+  place-items: center;
+  transition: transform 0.4s var(--ease), background 0.2s;
+}
+.logo:hover { transform: rotate(-8deg) scale(1.06); background: var(--white); }
+.mark { font-family: var(--font-mono); font-weight: 600; font-size: 15px; letter-spacing: -0.08em; }
+.pill { display: flex; align-items: center; gap: 4px; padding: 0 12px; }
+.link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  height: 40px;
+  padding: 0 12px;
+  border-radius: 100px;
+  font-size: 18px;
+  color: var(--zinc-800);
+  transition: background 0.2s, color 0.2s;
+}
+.link:hover { background: var(--zinc-200); color: var(--zinc-950); }
+.link svg { flex: none; }
+.mail {
+  position: relative;
+  width: 56px;
+  display: grid;
+  place-items: center;
+  background: var(--yellow);
+  border-color: var(--yellow);
+  transition: transform 0.3s var(--ease);
+}
+.mail:hover { transform: scale(1.08); }
+.mail:active { transform: scale(0.94); }
+.mailIcon { display: grid; place-items: center; }
+.toast {
+  position: absolute;
+  top: calc(100% + 10px);
+  right: 0;
+  white-space: nowrap;
+  font-size: 14px;
+  padding: 6px 12px;
+  border-radius: 100px;
+  background: var(--zinc-950);
+  color: var(--bg);
+}
+
+@media (max-width: 809.98px) {
+  .nav { gap: 6px; }
+  .logo, .pill, .mail { height: 48px; }
+  .logo, .mail { width: 48px; }
+  .pill { padding: 0 6px; gap: 0; }
+  .link { padding: 0 11px; }
+  .link span { display: none; }
+}
