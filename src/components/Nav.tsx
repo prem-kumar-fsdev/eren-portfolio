@@ -3,13 +3,12 @@
 import Link from "next/link";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
-import { CheckIcon, FolderIcon, MailIcon, SmileIcon } from "./Icons";
+import { CheckIcon, FolderIcon, MailIcon } from "./Icons";
 import { site } from "@/lib/site";
 import styles from "./Nav.module.css";
 
 const links = [
   { href: "/#work", label: "Work", Icon: FolderIcon },
-  { href: "/about", label: "About", Icon: SmileIcon },
 ];
 
 export function Nav() {
